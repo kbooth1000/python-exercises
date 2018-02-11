@@ -33,7 +33,7 @@ find_smallest_divisible(20)
 ### just skip straight to the next multiple of that number and test it 
 ### against your 1-20 (or better yet, 20-1) list until you find one that's
 ### not a factor of that new number. Then figure out the new first common
-### factor of those two numbers -- and that's your new increment. Start
+### product of those two numbers -- and that's your new increment. Start
 ### the loop over again until your 20-1 list gets to 1.
 
 ### (Then I realized, it probably doesn't need to go all the way to 1 -- it
