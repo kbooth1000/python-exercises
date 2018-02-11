@@ -6,14 +6,16 @@
 # eval if list(str(product)) = reverse(list(str(product)))
 
 finish = False
+palindromic_num = 0
+palindromic_factor_1 = 0
+palindromic_factor_2 = 0
 for factor_1 in range(999, 99, -1):
     for factor_2 in range (999, 99, -1):
-        num_str = str(factor_1 * factor_2)
-        print '%d * %d = %d' % (factor_1, factor_2, factor_1 * factor_2)
+        num = factor_1 * factor_2
+        num_str = str(num)
         if num_str == num_str[ : : -1]:
-            print '*****  %d * %d = %d' % (factor_1, factor_2, factor_1 * factor_2)
-            finish = True
-            break
-    if finish:
-        break
- 
+            if num > palindromic_num:
+                palindromic_num = num
+                palindromic_factor_1 = factor_1
+                palindromic_factor_2 = factor_2
+print '*****  %d * %d = %d' % (palindromic_factor_1, palindromic_factor_2, palindromic_num)
