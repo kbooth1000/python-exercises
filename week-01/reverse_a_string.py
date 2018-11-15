@@ -11,4 +11,4 @@ for i in range(0, string_length-1):
         string[i] = leet_num[j]
     string_leet = string_leet + leet[i]
 
-print string_leet
+print string_leet[::-1] #reverse the string
